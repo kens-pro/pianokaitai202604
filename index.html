@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ピアノ解体ショー 2025夏</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fffaf5;
+      --bg-soft: #fff3e8;
+      --bg-cream: #fdf7ef;
+      --card: #ffffff;
+      --line: #ead9c9;
+
+      --main: #d97b55;
+      --main-dark: #b85f3d;
+      --accent: #f2b84b;
+      --accent-soft: #fff3cf;
+      --mint: #dff3ee;
+      --sky: #eaf4ff;
+      --rose: #f8e8ec;
+
+      --text: #4a3427;
+      --text-mid: #6d5648;
+      --text-light: #8f7767;
+
+      --shadow: 0 14px 30px rgba(152, 97, 67, 0.10);
+      --shadow-soft: 0 8px 20px rgba(152, 97, 67, 0.07);
+
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--main-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.4;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .section-header h2 em {
+      font-style: normal;
+      color: var(--main);
+    }
+
+    .section-header p.lead {
+      margin-top: 14px;
+      color: var(--text-mid);
+      font-size: 1rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background:
+        radial-gradient(circle at top left, #fff6db 0%, transparent 32%),
+        radial-gradient(circle at top right, #ffeef1 0%, transparent 26%),
+        linear-gradient(180deg, #fffaf5 0%, #fff3e8 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 42px 0 72px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.65) 1px, transparent 1px);
+      background-size: 22px 22px;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #fff;
+      border: 2px solid #f4d4b2;
+      color: var(--main-dark);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--main);
+      display: inline-block;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      color: var(--text-mid);
+      margin-bottom: 24px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #f1ddcf;
+      color: var(--main-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(179, 117, 76, 0.05);
+    }
+
+    .hero-leadbox {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid #f2dfd1;
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-soft);
+      color: var(--text-mid);
+      font-size: 0.98rem;
+      max-width: 720px;
+    }
+
+    .hero-visual {
+      animation: fadeUp 1s ease 0.1s both;
+    }
+
+    .hero-card-main {
+      background: linear-gradient(180deg, #fff 0%, #fff8f2 100%);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .hero-top-pills {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--text-mid);
+      border: 1px solid #e8d7c8;
+      background: #fff;
+      max-width: 100%;
+    }
+
+    .hero-pill.primary {
+      background: #f8efc9;
+    }
+
+    .hero-pill.sky {
+      background: var(--sky);
+    }
+
+    .hero-illustration {
+      background: linear-gradient(180deg, #f2dac4 0%, #e4c5a9 100%);
+      border: 1px solid #d6b696;
+      border-radius: 34px;
+      padding: 36px 24px 22px;
+      box-shadow: inset 0 -8px 0 rgba(255,255,255,0.25);
+      margin-bottom: 18px;
+    }
+
+    .piano-outer {
+      width: min(100%, 620px);
+      margin: 0 auto;
+      background: #d9bb9c;
+      border-radius: 28px;
+      padding: 34px 18px 34px;
+      box-shadow: inset 0 -10px 0 rgba(255,255,255,0.18);
+    }
+
+    .piano-lid {
+      width: min(72%, 360px);
+      height: 56px;
+      margin: 0 auto 28px;
+      border-radius: 999px;
+      background: #c98f68;
+      position: relative;
+    }
+
+    .piano-lid::after {
+      content: '';
+      position: absolute;
+      right: 18px;
+      top: 15px;
+      width: 72px;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.38);
+    }
+
+    .keys-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4px;
+      min-height: 166px;
+    }
+
+    .white-key {
+      width: 44px;
+      height: 150px;
+      background: #f8f8f8;
+      border-radius: 0 0 14px 14px;
+      border: 1px solid #dfdfdf;
+      position: relative;
+      box-shadow: inset 0 -4px 0 rgba(0,0,0,0.04);
+    }
+
+    .black-key {
+      width: 28px;
+      height: 96px;
+      background: #8b6c52;
+      border-radius: 0 0 12px 12px;
+      margin-left: -18px;
+      margin-right: -18px;
+      z-index: 2;
+      box-shadow: inset 0 -3px 0 rgba(255,255,255,0.08);
+    }
+
+    .hero-feature-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-feature-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-feature-text {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid #ead9c9;
+      border-radius: 18px;
+      padding: 18px 20px;
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-feature-badge {
+      white-space: nowrap;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid #dfd0c2;
+      font-weight: 800;
+      color: var(--text-mid);
+      box-shadow: var(--shadow-soft);
+      background: #fff;
+    }
+
+    .hero-feature-badge.mint {
+      background: #dfece8;
+    }
+
+    .hero-feature-badge.rose {
+      background: var(--rose);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-light);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-scroll-line {
+      width: 2px;
+      height: 44px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--main), transparent);
+      animation: scrollPulse 2s infinite;
+    }
+
+    /* ===== STORY ===== */
+    #story {
+      padding: 96px 0;
+      background: linear-gradient(180deg, #fff8f1 0%, #fffdfb 100%);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .story-box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 34px 28px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .story-left {
+      position: sticky;
+      top: 24px;
+    }
+
+    .story-number {
+      font-size: clamp(3.8rem, 8vw, 6rem);
+      font-weight: 800;
+      color: #f3d2b9;
+      line-height: 1;
+      margin-top: 12px;
+    }
+
+    .story-title-large {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.5;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .story-title-large em {
+      font-style: normal;
+      color: var(--main);
+    }
+
+    .story-body p {
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .story-highlight {
+      background: linear-gradient(180deg, #fff6cf 0%, #fff3df 100%);
+      border: 1px solid #f0df98;
+      border-radius: 20px;
+      padding: 22px 20px;
+      margin: 26px 0;
+      box-shadow: 0 8px 16px rgba(222, 173, 54, 0.08);
+    }
+
+    .story-highlight p {
+      margin: 0;
+      color: #7a5619;
+      font-weight: 700;
+    }
+
+    /* ===== DETAILS ===== */
+    #details {
+      padding: 96px 0;
+      background: var(--bg);
+    }
+
+    .details-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .detail-card {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 24px;
+      align-items: start;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-soft);
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .detail-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .detail-num {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #ffe5ca 0%, #ffd6ae 100%);
+      color: var(--main-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      font-weight: 800;
+      box-shadow: inset 0 -5px 0 rgba(255,255,255,0.45);
+    }
+
+    .detail-content h3 {
+      font-size: 1.35rem;
+      line-height: 1.6;
+      color: var(--text);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .detail-content p {
+      font-size: 0.98rem;
+      color: var(--text-mid);
+      margin-bottom: 12px;
+    }
+
+    .quiz-card {
+      margin-top: 16px;
+      background: linear-gradient(180deg, #eef7ff 0%, #f9fcff 100%);
+      border: 1px solid #dbe9fb;
+      border-radius: 16px;
+      padding: 16px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .quiz-q {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #d7eaff;
+      color: #4a78b1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .quiz-card p {
+      margin: 0;
+      color: #4e6883;
+      font-size: 0.93rem;
+      font-weight: 700;
+    }
+
+    /* ===== ACTIVITIES ===== */
+    #activities {
+      padding: 96px 0;
+      background: linear-gradient(180deg, #fff2ea 0%, #fff8f3 100%);
+    }
+
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .activity-tile {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px 22px;
+      box-shadow: var(--shadow-soft);
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .activity-tile.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .activity-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #fff2d5 0%, #ffe4ba 100%);
+      font-size: 1.7rem;
+      margin-bottom: 14px;
+    }
+
+    .activity-tile p {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+    }
+
+    .championship-banner {
+      background: linear-gradient(135deg, #fff3c8 0%, #ffe7a9 100%);
+      border: 1px solid #efd078;
+      border-radius: 28px;
+      padding: 34px 26px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .championship-banner::before {
+      content: '♪';
+      position: absolute;
+      right: 20px;
+      top: -10px;
+      font-size: 120px;
+      color: rgba(188, 129, 27, 0.08);
+      font-weight: 800;
+    }
+
+    .championship-banner h3 {
+      color: #8a5a12;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .championship-banner p {
+      color: #7a6030;
+      font-size: 0.98rem;
+    }
+
+    /* ===== MERITS ===== */
+    #merits {
+      padding: 96px 0;
+      background: #fffdf9;
+    }
+
+    .merits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .merit-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .merit-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .merit-num {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--main-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .merit-divider {
+      width: 44px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ffd59f 0%, #f4b964 100%);
+      margin: 0 auto 18px;
+    }
+
+    .merit-card h4 {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .merit-card p {
+      color: var(--text-mid);
+      font-size: 0.94rem;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials {
+      padding: 96px 0;
+      background: linear-gradient(180deg, #fff6ef 0%, #fffdfb 100%);
+    }
+
+    .testimonials-scroll {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px 22px 22px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .testimonial-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .testimonial-card::before {
+      content: '“';
+      position: absolute;
+      top: 10px;
+      left: 16px;
+      font-size: 4rem;
+      line-height: 1;
+      color: #f4d6bf;
+      font-weight: 800;
+    }
+
+    .testimonial-card p {
+      color: var(--text-mid);
+      font-size: 0.94rem;
+      position: relative;
+      z-index: 1;
+      padding-top: 12px;
+    }
+
+    /* ===== RECOMMEND ===== */
+    #recommend {
+      padding: 96px 0;
+      background: var(--bg);
+    }
+
+    .recommend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .recommend-card {
+      background: linear-gradient(180deg, #fff 0%, #fff9f2 100%);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow-soft);
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .recommend-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .recommend-card::before {
+      content: '✓';
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #e8f8ef;
+      color: #32905d;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .recommend-card p {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+    }
+
+    /* ===== APPLY ===== */
+    #apply {
+      padding: 96px 0;
+      background: linear-gradient(180deg, #fff0ec 0%, #fff8f5 100%);
+    }
+
+    .apply-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .apply-main,
+    .apply-details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    #apply h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.4;
+      color: var(--text);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    #apply h2 em {
+      font-style: normal;
+      color: var(--main);
+    }
+
+    #apply .tagline {
+      color: var(--text-mid);
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .apply-note {
+      background: #fff7de;
+      border: 1px solid #efd88c;
+      border-radius: 18px;
+      padding: 16px 16px;
+      color: #7c5e1c;
+      font-size: 0.93rem;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .cta-button {
+      display: block;
+      text-align: center;
+      background: linear-gradient(180deg, #f6a37f 0%, #ea8661 100%);
+      color: #fff;
+      padding: 18px 22px;
+      border-radius: 999px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      box-shadow: 0 12px 20px rgba(218, 123, 85, 0.24);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px rgba(218, 123, 85, 0.28);
+    }
+
+    .cta-sub {
+      margin-top: 14px;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.88rem;
+      line-height: 1.9;
+    }
+
+    .apply-row {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px dashed #eddccd;
+    }
+
+    .apply-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .apply-label {
+      min-width: 78px;
+      color: var(--main-dark);
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding-top: 2px;
+    }
+
+    .apply-value {
+      color: var(--text-mid);
+      font-size: 0.96rem;
+      line-height: 1.8;
+    }
+
+    .apply-value strong {
+      color: var(--text);
+      font-size: 1.16rem;
+    }
+
+    .apply-value .free {
+      display: inline-block;
+      color: #d45f3b;
+      background: #fff2ed;
+      border: 1px solid #f3cbbb;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #fff6ef;
+      padding: 42px 0 52px;
+      border-top: 1px solid #f0dfcf;
+    }
+
+    .footer-logo {
+      text-align: center;
+      color: var(--main-dark);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .footer-links a {
+      color: var(--text-light);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .copyright {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.78rem;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+      50% {
+        opacity: 0.4;
+        transform: scaleY(0.55);
+        transform-origin: top;
+      }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 980px) {
+      .hero-inner,
+      .story-grid,
+      .apply-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .story-left {
+        position: static;
+      }
+
+      .merits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 28px 0 64px;
+      }
+
+      .container,
+      .hero-inner {
+        width: min(100% - 20px, 1100px);
+      }
+
+      .hero-card-main {
+        border-radius: 28px;
+        padding: 14px;
+      }
+
+      .hero-top-pills {
+        gap: 10px;
+      }
+
+      .hero-pill {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.86rem;
+        padding: 10px 14px;
+      }
+
+      .hero-illustration {
+        padding: 18px 12px 12px;
+        border-radius: 26px;
+      }
+
+      .piano-outer {
+        padding: 20px 10px 18px;
+        border-radius: 22px;
+      }
+
+      .piano-lid {
+        height: 38px;
+        margin-bottom: 18px;
+      }
+
+      .piano-lid::after {
+        width: 46px;
+        height: 12px;
+        top: 13px;
+      }
+
+      .keys-wrap {
+        gap: 3px;
+        min-height: 124px;
+      }
+
+      .white-key {
+        width: 31px;
+        height: 110px;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .black-key {
+        width: 20px;
+        height: 72px;
+        margin-left: -13px;
+        margin-right: -13px;
+        border-radius: 0 0 9px 9px;
+      }
+
+      .hero-feature-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-feature-badge {
+        width: fit-content;
+        max-width: 100%;
+        white-space: normal;
+      }
+
+      .detail-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .detail-num {
+        width: 58px;
+        height: 58px;
+        font-size: 1.2rem;
+      }
+
+      .apply-main,
+      .apply-details,
+      .story-box {
+        padding: 24px 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle,
+      .hero-leadbox,
+      .hero-feature-text,
+      .activity-tile p,
+      .recommend-card p,
+      .testimonial-card p,
+      .detail-content p {
+        font-size: 0.92rem;
+      }
+
+      .white-key {
+        width: 26px;
+        height: 96px;
+      }
+
+      .black-key {
+        width: 17px;
+        height: 64px;
+        margin-left: -11px;
+        margin-right: -11px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">Summer Special 2025</div>
+        <h1 class="hero-title">
+          親子でびっくり！<br>
+          <em>ピアノ解体ショー</em>
+        </h1>
+        <p class="hero-subtitle">
+          見て、触れて、感じてわかる。<br>
+          「ピアノってこうなってるの!?」がいっぱいの体験型イベントです。
+        </p>
+
+        <div class="hero-tags">
+          <span class="hero-tag">無料参加</span>
+          <span class="hero-tag">夏休み限定</span>
+          <span class="hero-tag">自由研究にも◎</span>
+          <span class="hero-tag">親子で体験</span>
+        </div>
+
+        <div class="hero-leadbox">
+          お子さまが「楽しかった！」で終わるだけでなく、<br>
+          ピアノの仕組みや音の出る理由まで自然に学べるイベントです。<br>
+          親御さんのほうが夢中になることも少なくありません。
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <div class="hero-top-pills">
+            <div class="hero-pill primary">🎹 体験しながら学べる特別イベント</div>
+            <div class="hero-pill sky">自由研究にもぴったり</div>
+          </div>
+
+          <div class="hero-illustration" aria-hidden="true">
+            <div class="piano-outer">
+              <div class="piano-lid"></div>
+              <div class="keys-wrap">
+                <div class="white-key"></div>
+                <div class="black-key"></div>
+                <div class="white-key"></div>
+                <div class="black-key"></div>
+                <div class="white-key"></div>
+                <div class="white-key"></div>
+                <div class="black-key"></div>
+                <div class="white-key"></div>
+                <div class="black-key"></div>
+                <div class="white-key"></div>
+                <div class="black-key"></div>
+                <div class="white-key"></div>
+                <div class="white-key"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-feature-list">
+            <div class="hero-feature-row">
+              <div class="hero-feature-text">🔍 鍵盤やハンマーの動きが目の前で見える</div>
+              <div class="hero-feature-badge mint">小さい子でも楽しめる！</div>
+            </div>
+
+            <div class="hero-feature-row">
+              <div class="hero-feature-text">✨ 電子ピアノとの違いも、親子でわかりやすく体感</div>
+              <div class="hero-feature-badge rose">親子で一緒に発見</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- STORY -->
+    <section id="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-left">
+            <div class="story-box">
+              <p class="section-label">Origin Story</p>
+              <h2 class="story-title-large">
+                一枚の鍵盤が<br>
+                <em>はじまりでした</em>
+              </h2>
+              <div class="story-number" aria-hidden="true">01</div>
+            </div>
+          </div>
+
+          <div class="story-body">
+            <div class="story-box">
+              <p>夏休みのある日のこと。元調律師である私が、いつものようにご家庭でピアノの調律をしていた時です。</p>
+              <p>鍵盤を外し、内部を調整するその作業の背後で、小学生の兄弟が目を皿のようにして、食い入るようにその様子を見つめていました。</p>
+
+              <div class="story-highlight">
+                <p>
+                  「この外した鍵盤、はめてみる？」と声をかけると、子どもたちは我先にと鍵盤を取り合いました。<br>
+                  調律師にとっては日常の作業が、子どもたちにとっては「ワクワクとビックリの宝庫」だったのです。
+                </p>
+              </div>
+
+              <p>この感動と発見を、もっとたくさんの子どもたちに届けたい。その思いが「ピアノ解体ショー」誕生のきっかけとなりました。</p>
+              <p>実際にショーを始めると、さらに驚くべきことが。毎回終わるたびに、お父さんやお母さんからも質問が殺到するほど、大人も夢中になるイベントだとわかったのです。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section id="details">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">What You'll Discover</p>
+          <h2>ショーで解き明かす<br><em>ピアノの4つのヒミツ</em></h2>
+          <p class="lead">
+            子どもにもわかりやすく、でも内容はしっかり本格的。<br>
+            「楽しい」だけで終わらない学びがあります。
+          </p>
+        </div>
+
+        <div class="details-list">
+          <div class="detail-card">
+            <div class="detail-num">01</div>
+            <div class="detail-content">
+              <h3>あなたが知らない「鍵盤の真実」</h3>
+              <p>
+                普段見えている鍵盤の長さは、実はその倍以上。鍵盤はシーソーのように動き、その「てこの原理」で音が生まれます。電子ピアノとの鍵盤の仕組みの違いも紹介します。
+              </p>
+              <div class="quiz-card">
+                <span class="quiz-q">Q.</span>
+                <p>弾いた鍵盤が戻ってくるのはなぜ？何の力で戻るのでしょうか？</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-num">02</div>
+            <div class="detail-content">
+              <h3>音色を操る「鍵盤の重さ」の秘密</h3>
+              <p>
+                低い音と高い音では、鍵盤の重さが異なります。これは弦を叩く「ハンマー」の大きさが違うため。生ピアノならではの繊細なタッチの秘密を体感します。
+              </p>
+              <div class="quiz-card">
+                <span class="quiz-q">Q.</span>
+                <p>低い音と高い音、鍵盤の重さって一緒？違う？どっちが軽いでしょう？</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-num">03</div>
+            <div class="detail-content">
+              <h3>電気いらずの「魔法の響板」</h3>
+              <p>
+                コンセントなしで大きな音が出る秘密は「響板（きょうばん）」。小さな振動を大きな音へと広げる役割を持っています。音の広がり方を、わかりやすく楽しく体感します。
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-num">04</div>
+            <div class="detail-content">
+              <h3>驚くほど上手になる「演奏のコツ」</h3>
+              <p>
+                小さな音はハンマーの動きを「ゆっくり」に、大きな音は「スピード」が重要。余分な力は不要だとわかります。椅子の調整方法や、大人と子どもの耳の違いも解説します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section id="activities">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Hands-On Experience</p>
+          <h2>見るだけじゃない。<br><em>体で感じる4つの体験</em></h2>
+          <p class="lead">
+            目で見て、手で感じて、耳で驚く。<br>
+            お子さまの「知りたい！」がどんどん広がります。
+          </p>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-tile">
+            <div class="activity-icon">🎹</div>
+            <p>ピアノのアクションを引き出し、鍵盤とハンマーの連動を間近で観察・体験</p>
+          </div>
+
+          <div class="activity-tile">
+            <div class="activity-icon">👀</div>
+            <p>ハンマーがどう動いて音が出るのか、内部の仕組みを目の前でわかりやすく観察</p>
+          </div>
+
+          <div class="activity-tile">
+            <div class="activity-icon">🎵</div>
+            <p>響板のはたらきによって、音の広がり方がどう変わるのかを体感</p>
+          </div>
+
+          <div class="activity-tile">
+            <div class="activity-icon">✨</div>
+            <p>普段見ることのできないピアノの内部を見ながら弾く、貴重な体験</p>
+          </div>
+        </div>
+
+        <div class="championship-banner">
+          <h3>家族対抗！「小さい音選手権」</h3>
+          <p>
+            一番小さな音を出した人が優勝！<br>
+            音のコントロールの難しさと楽しさを、家族みんなで競いながら体感します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MERITS -->
+    <section id="merits">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Why Join</p>
+          <h2>参加する<em>3つの理由</em></h2>
+        </div>
+
+        <div class="merits-grid">
+          <div class="merit-card">
+            <div class="merit-num">Merit 01</div>
+            <div class="merit-divider"></div>
+            <h4>ピアノへの<br>好奇心が深まる</h4>
+            <p>
+              鳴る仕組みを「見て考え」、アコースティックと電子の違いを「体感」することで、楽器への理解が格段に深まります。
+            </p>
+          </div>
+
+          <div class="merit-card" style="transition-delay:0.12s">
+            <div class="merit-num">Merit 02</div>
+            <div class="merit-divider"></div>
+            <h4>演奏が<br>もっと上手になる</h4>
+            <p>
+              仕組みを知ることは、スポーツで体の仕組みを知るのと同じ。表現のコツと音作りの感覚が今後の練習に直結します。
+            </p>
+          </div>
+
+          <div class="merit-card" style="transition-delay:0.24s">
+            <div class="merit-num">Merit 03</div>
+            <div class="merit-divider"></div>
+            <h4>家族みんなが<br>熱中できる</h4>
+            <p>
+              クイズとゲームを通じて、子どもから大人まで全員が「ピアノって面白い！」と感動を共有できる最高の時間です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Voices</p>
+          <h2>参加者の声</h2>
+          <p class="lead">毎回、親子でたくさんの驚きの声をいただいています。</p>
+        </div>
+
+        <div class="testimonials-scroll">
+          <div class="testimonial-card"><p>説明がわかりやすく、親の私の方が夢中になって聞いてしまいました。</p></div>
+          <div class="testimonial-card"><p>ピアノは打楽器か弦楽器か？の答えが「打弦鍵盤楽器」と知って、深く納得しました。</p></div>
+          <div class="testimonial-card"><p>鍵盤の長さが見えている部分よりずっと長いと知って、子どもがとても驚いていました。</p></div>
+          <div class="testimonial-card"><p>響板のはたらきについて初めて知りました。音の広がり方がよくわかって面白かったです。</p></div>
+          <div class="testimonial-card"><p>電子鍵盤との違いがよくわかりました。仕組みをこれほど詳しく学べるとは思いませんでした。</p></div>
+          <div class="testimonial-card"><p>大学でも解体の授業はありますが、電子楽器との違いまで説明していただけたのが大変勉強になりました。</p></div>
+          <div class="testimonial-card"><p>小さい子でもわかりやすい説明で、夏休みの忘れられない体験になりました。</p></div>
+          <div class="testimonial-card"><p>もっと多くの人に知ってもらいたい。本当に素晴らしいイベントです！</p></div>
+          <div class="testimonial-card"><p>音の仕組みを、子どもでも楽しく理解できる内容でした。また参加したいです。</p></div>
+          <div class="testimonial-card"><p>親子で楽しく学べた時間でした。子どもが帰ってからもずっと話していました。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMEND -->
+    <section id="recommend">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">For You</p>
+          <h2>こんな方に<em>おすすめです</em></h2>
+        </div>
+
+        <div class="recommend-grid">
+          <div class="recommend-card"><p>音楽に興味があるお子さまとそのご家族</p></div>
+          <div class="recommend-card"><p>夏休みの自由研究のテーマを探しているご家族</p></div>
+          <div class="recommend-card"><p>ピアノを習っていて、楽器をもっと深く理解したい方</p></div>
+          <div class="recommend-card"><p>アコースティックと電子ピアノの違いを体感したい方</p></div>
+          <div class="recommend-card"><p>親子で新しい発見と感動を共有したいご家族</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section id="apply">
+      <div class="container">
+        <div class="apply-wrapper">
+          <div class="apply-main">
+            <p class="section-label">Apply Now</p>
+            <h2>
+              夏休みの思い出に<br>
+              <em>親子で特別な1時間を</em>
+            </h2>
+            <p class="tagline">
+              毎回ご好評につき、席が埋まるのが早いです。<br>
+              「気になる」と思われたら、お早めのお申し込みがおすすめです。
+            </p>
+
+            <div class="apply-note">
+              小さなお子さまでも楽しめるよう、わかりやすく進行します。<br>
+              「難しいイベントかな？」と心配な方も安心してご参加ください。
+            </div>
+
+            <a href="tel:0740-22-2063" class="cta-button">📞 今すぐ電話でお申し込み</a>
+            <p class="cta-sub">
+              受付時間 10:00〜18:00<br>
+              yoshida@toriimusic.co.jp でもご連絡いただけます<br>
+              または担当スタッフまでお声がけください
+            </p>
+          </div>
+
+          <div class="apply-details">
+            <div class="apply-row">
+              <span class="apply-label">主催</span>
+              <span class="apply-value">株式会社トリイ<br>元ピアノ調律師 吉田</span>
+            </div>
+
+            <div class="apply-row">
+              <span class="apply-label">参加費</span>
+              <span class="apply-value"><span class="free">無料！</span></span>
+            </div>
+
+            <div class="apply-row">
+              <span class="apply-label">対象</span>
+              <span class="apply-value">親子参加型イベント<br><small style="opacity:0.72;">※開催によっては在籍生徒とご家族限定の場合あり</small></span>
+            </div>
+
+            <div class="apply-row">
+              <span class="apply-label">日時</span>
+              <span class="apply-value"><strong>（仮）7月29日(水) 11:00〜12:00</strong></span>
+            </div>
+
+            <div class="apply-row">
+              <span class="apply-label">場所</span>
+              <span class="apply-value">和邇コミュニティーセンター</span>
+            </div>
+
+            <div class="apply-row">
+              <span class="apply-label">定員</span>
+              <span class="apply-value">各回先着順 ／ 残席わずか</span>
+            </div>
+
+            <div class="apply-row">
+              <span class="apply-label">実績</span>
+              <span class="apply-value" style="font-size:0.9rem;">
+                草野音楽教室、古矢ピアノ教室、トリイ大津わにセンター、いりえピアノリトミック教室など各地で大好評開催中
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">ピアノ解体ショー</div>
+      <div class="footer-links">
+        <a href="https://www.toriimusic.co.jp/">会社情報</a>
+        <a href="https://www.toriimusic.co.jp/privacy_policy/">プライバシーポリシー</a>
+        <a href="https://www.toriimusic.co.jp/toiawase/">お問い合わせ</a>
+      </div>
+      <p class="copyright">© 2025 株式会社トリイ. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const observerOptions = {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(
+      '.detail-card, .activity-tile, .merit-card, .testimonial-card, .recommend-card'
+    ).forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
